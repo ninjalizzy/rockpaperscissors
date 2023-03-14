@@ -8,7 +8,13 @@
 </head>
 <body>
     <script>
-        
+        const choices = ["Rock", "Paper", "Scissors"]
+
+        function getComputerChoice() { 
+            let computerChoice = Math.floor(Math.random() * choices.length);
+            return computerChoice;
+            console.log(choices[computerChoice])
+        }
     </script>
 </body>
 </html>
