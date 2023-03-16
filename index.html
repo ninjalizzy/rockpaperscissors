@@ -15,10 +15,10 @@
             return (choices[computerChoice]);
         }
 
-        let playerChoice = prompt("Choose your weapon!");
         let computerChoice = getComputerChoice();
 
-        function round(playerChoice, computerChoice) {
+        function round(computerChoice) {
+            let playerChoice = prompt("Choose your weapon!");
             console.log("Player choice: ", playerChoice)
             console.log("Computer choice: ", computerChoice)
             if (playerChoice.toLowerCase() == "rock") {
