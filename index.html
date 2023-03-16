@@ -11,14 +11,13 @@
         const choices = ["Rock", "Paper", "Scissors"]
 
         function getComputerChoice() { 
-            let computerChoice = Math.floor(Math.random() * choices.length);
-            return (choices[computerChoice]);
+            let computerSelection = Math.floor(Math.random() * choices.length);
+            return (choices[computerSelection]);
         }
 
-        let computerChoice = getComputerChoice();
-
-        function round(computerChoice) {
+        function round() {
             let playerChoice = prompt("Choose your weapon!");
+            let computerChoice = getComputerChoice();
             console.log("Player choice: ", playerChoice)
             console.log("Computer choice: ", computerChoice)
             if (playerChoice.toLowerCase() == "rock") {
