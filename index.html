@@ -15,10 +15,12 @@
             return (choices[computerChoice]);
         }
 
-        let playerChoice = ("rock");
+        let playerChoice = prompt("Choose your weapon!");
         let computerChoice = getComputerChoice();
 
-        function game(playerChoice, computerChoice) {
+        function round(playerChoice, computerChoice) {
+            console.log("Player choice: ", playerChoice)
+            console.log("Computer choice: ", computerChoice)
             if (playerChoice.toLowerCase() == "rock") {
                 if (computerChoice == "Scissors") {
                     return ("Rock crushes scissors. You win!")
@@ -45,6 +47,14 @@
                     return ("Scissors cut paper. You win!")
                 }
                 else return ("Tie!")
+            }
+        }
+
+        function game() {
+            for (let i = 0; i < 5; i++) {
+                function round(playerChoice, computerChoice) {
+                    console.log()
+                }
             }
         }
     </script>
