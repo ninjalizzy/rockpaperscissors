@@ -22,30 +22,39 @@
             console.log("Computer choice: ", computerChoice)
             if (playerChoice.toLowerCase() == "rock") {
                 if (computerChoice == "Scissors") {
-                    return ("Rock crushes scissors. You win!")
+                    console.log("Rock crushes scissors. You win!")
+                    return 1
                 }
                 else if (computerChoice == "Paper") {
-                    return ("Paper covers rock. You lose!")
+                    console.log("Paper covers rock. You lose!")
+                    return -1
                 }
-                else return ("Tie!")
+                else console.log ("Tie!")
+                    return 0;
             }
             if (playerChoice.toLowerCase() == "paper") {
                 if (computerChoice == "Rock") {
-                    return ("Paper covers rock. You win!")
+                    console.log ("Paper covers rock. You win!")
+                    return 1
                 }
                 else if (computerChoice == "Scissors") {
-                    return ("Scissors cut paper. You lose!")
+                    console.log ("Scissors cut paper. You lose!")
+                    return -1
                 }
-                else return ("Tie!")
+                else console.log ("Tie!")
+                    return 0;
             }
             if (playerChoice.toLowerCase() == "scissors") {
                 if (computerChoice == "Rock") {
-                    return ("Rock crushes scissors. You lose!")
+                    console.log ("Rock crushes scissors. You lose!")
+                    return -1;
                 }
                 else if (computerChoice == "Paper") {
-                    return ("Scissors cut paper. You win!")
+                    console.log ("Scissors cut paper. You win!")
+                    return 1;
                 }
-                else return ("Tie!")
+                else console.log ("Tie!")
+                    return 0;
             }
         }
 
