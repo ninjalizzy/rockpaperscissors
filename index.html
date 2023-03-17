@@ -15,6 +15,8 @@
             return (choices[computerSelection]);
         }
 
+        let score = 0;
+
         function round() {
             let playerChoice = prompt("Choose your weapon!");
             let computerChoice = getComputerChoice();
@@ -23,44 +25,55 @@
             if (playerChoice.toLowerCase() == "rock") {
                 if (computerChoice == "Scissors") {
                     console.log("Rock crushes scissors. You win!")
-                    return 1
+                    return score++;
                 }
                 else if (computerChoice == "Paper") {
                     console.log("Paper covers rock. You lose!")
-                    return -1
+                    return score--;
                 }
                 else console.log ("Tie!")
-                    return 0;
+                    return score;
             }
             if (playerChoice.toLowerCase() == "paper") {
                 if (computerChoice == "Rock") {
                     console.log ("Paper covers rock. You win!")
-                    return 1
+                    return score++;
                 }
                 else if (computerChoice == "Scissors") {
                     console.log ("Scissors cut paper. You lose!")
-                    return -1
+                    return score--;
                 }
                 else console.log ("Tie!")
-                    return 0;
+                    return score;
             }
             if (playerChoice.toLowerCase() == "scissors") {
                 if (computerChoice == "Rock") {
                     console.log ("Rock crushes scissors. You lose!")
-                    return -1;
+                    return score--;
                 }
                 else if (computerChoice == "Paper") {
                     console.log ("Scissors cut paper. You win!")
-                    return 1;
+                    return score++;
                 }
                 else console.log ("Tie!")
-                    return 0;
+                    return score;
             }
         }
-
+        
         function game() {
             for (let i = 0; i < 5; i++) {
                 console.log(round())
+            }
+            console.log("Score is: ", score)
+
+            if (score > 0) {
+                console.log("You win!")
+            }
+            if (score < 0) {
+                console.log("You lose!")
+            }
+            if (score == 0) {
+                console.log("It's a tie!")
             }
         }
     </script>
