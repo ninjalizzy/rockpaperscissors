@@ -4,57 +4,55 @@ const scissorsBtn = document.getElementById('scissors');
 let playerChose = document.querySelector('.playerChose');
 let computerChose = document.querySelector('.computerChose');
 let result = document.querySelector('.result');
-
-const choices = ["Rock", "Paper", "Scissors"]
+let playerPoints = document.querySelector('.playerPoints');
+let computerPoints = document.querySelector('.computerPoints');
 
 function getComputerChoice() { 
+    const choices = ["Rock", "Paper", "Scissors"]
     let computerSelection = Math.floor(Math.random() * choices.length);
     return (choices[computerSelection]);
 }
 
 let computerChoice;
-let score = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 function round(playerChoice) {
     let computerChoice = getComputerChoice();
     playerChose.textContent = `Player choice: ${playerChoice}`;
     computerChose.textContent = `Computer choice: ${computerChoice}`;
-    if (playerChoice.toLowerCase() == "rock") {
+    if (playerChoice == computerChoice) {
+        result.textContent = "Tie!"
+    } else if (playerChoice == "Rock") {
         if (computerChoice == "Scissors") {
             result.textContent = "Rock crushes scissors. You win!";
-            return score++;
+            return playerScore++;
         }
         else if (computerChoice == "Paper") {
             result.textContent = "Paper covers rock. You lose!";
-            return score--;
+            return computerScore++;
         }
-        else result.textContent = "Tie!";
-            return score;
-    }
-    if (playerChoice.toLowerCase() == "paper") {
+    } else if (playerChoice == "Paper") {
         if (computerChoice == "Rock") {
             result.textContent = "Paper covers rock. You win!";
-            return score++;
+            return playerScore++;
         }
         else if (computerChoice == "Scissors") {
             result.textContent = "Scissors cut paper. You lose!";
-            return score--;
+            return computerScore++;
         }
-        else result.textContent = "Tie!";
-            return score;
-    }
-    if (playerChoice.toLowerCase() == "scissors") {
+    } else if (playerChoice == "Scissors") {
         if (computerChoice == "Rock") {
             result.textContent = "Rock crushes scissors. You lose!";
-            return score--;
+            return computerScore++;
         }
         else if (computerChoice == "Paper") {
             result.textContent = "Scissors cut paper. You win!";
-            return score++;
+            return playerScore++;
         }
-        else result.textContent = "Tie!";
-            return score;
     }
+    playerPoints.textContent = `Player points: ${playerScore}`;
+    computerPoints.textContent = `Computer points : ${computerScore}`;
 }
 
 // function game() {
