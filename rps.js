@@ -23,32 +23,35 @@ function round(playerChoice) {
     computerChose.textContent = `Computer choice: ${computerChoice}`;
     if (playerChoice == computerChoice) {
         result.textContent = "Tie!"
-    } else if (playerChoice == "Rock") {
+    }
+    if (playerChoice == "Rock") {
         if (computerChoice == "Scissors") {
             result.textContent = "Rock crushes scissors. You win!";
-            return playerScore++;
+            playerScore++;
         }
         else if (computerChoice == "Paper") {
             result.textContent = "Paper covers rock. You lose!";
-            return computerScore++;
+            computerScore++;
         }
-    } else if (playerChoice == "Paper") {
+    }
+    if (playerChoice == "Paper") {
         if (computerChoice == "Rock") {
             result.textContent = "Paper covers rock. You win!";
-            return playerScore++;
+            playerScore++;
         }
         else if (computerChoice == "Scissors") {
             result.textContent = "Scissors cut paper. You lose!";
-            return computerScore++;
+            computerScore++;
         }
-    } else if (playerChoice == "Scissors") {
+    }
+    if (playerChoice == "Scissors") {
         if (computerChoice == "Rock") {
             result.textContent = "Rock crushes scissors. You lose!";
-            return computerScore++;
+            computerScore++;
         }
         else if (computerChoice == "Paper") {
             result.textContent = "Scissors cut paper. You win!";
-            return playerScore++;
+            playerScore++;
         }
     }
     playerPoints.textContent = `Player points: ${playerScore}`;
