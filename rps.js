@@ -1,3 +1,8 @@
+const rockBtn = document.getElementById('rock');
+const paperBtn = document.getElementById('paper');
+const scissorsBtn = document.getElementById('scissors');
+const buttons = document.querySelectorAll('button');
+
 const choices = ["Rock", "Paper", "Scissors"]
 
 function getComputerChoice() { 
@@ -5,10 +10,10 @@ function getComputerChoice() {
     return (choices[computerSelection]);
 }
 
+let computerChoice;
 let score = 0;
 
-function round() {
-    let playerChoice = prompt("Choose your weapon!");
+function round(playerChoice) {
     let computerChoice = getComputerChoice();
     console.log("Player choice: ", playerChoice)
     console.log("Computer choice: ", computerChoice)
@@ -63,4 +68,8 @@ function round() {
 //     if (score == 0) {
 //         console.log("IT'S A TIE!")
 //     }
-// }
+// 
+
+rockBtn.addEventListener('click', () => round('Rock'));
+paperBtn.addEventListener('click', () => round('Paper'));
+scissorsBtn.addEventListener('click', () => round('Scissors'));
