@@ -1,6 +1,8 @@
 const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
 const scissorsBtn = document.getElementById('scissors');
+let playerChose = document.querySelector('.playerChose');
+let computerChose = document.querySelector('.computerChose');
 let result = document.querySelector('.result');
 
 const choices = ["Rock", "Paper", "Scissors"]
@@ -15,8 +17,8 @@ let score = 0;
 
 function round(playerChoice) {
     let computerChoice = getComputerChoice();
-    console.log("Player choice: ", playerChoice)
-    console.log("Computer choice: ", computerChoice)
+    playerChose.textContent = `Player choice: ${playerChoice}`;
+    computerChose.textContent = `Computer choice: ${computerChoice}`;
     if (playerChoice.toLowerCase() == "rock") {
         if (computerChoice == "Scissors") {
             result.textContent = "Rock crushes scissors. You win!";
