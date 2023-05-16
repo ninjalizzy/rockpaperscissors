@@ -2,6 +2,7 @@ const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
 const scissorsBtn = document.getElementById('scissors');
 const buttons = document.querySelectorAll('button');
+const resetBtn = document.getElementById('reset');
 let playerChose = document.querySelector('.playerChose');
 let computerChose = document.querySelector('.computerChose');
 let result = document.querySelector('.result');
@@ -61,18 +62,24 @@ function play(playerChoice) {
     if (playerScore >= 5) {
         result.textContent = "YOU WIN!";
         buttons.forEach(e => {
-            e.disabled = true;
+            e.toggleAttribute("disabled");
         });
+        resetBtn.disabled = false;
+        document.getElementById('hidden').classList.remove('hidden');
     }
 
     if (computerScore >= 5) {
         result.textContent = "YOU LOSE!";
         buttons.forEach(e => {
-            e.disabled = true;
+            e.toggleAttribute("disabled");
         });
+        resetBtn.disabled = false;
+        document.getElementById('hidden').classList.remove('hidden');
     }
+
 }
 
 rockBtn.addEventListener('click', () => play('Rock'));
 paperBtn.addEventListener('click', () => play('Paper'));
 scissorsBtn.addEventListener('click', () => play('Scissors'));
+resetBtn.addEventListener('click', () => window.location.reload());
