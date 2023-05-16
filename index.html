@@ -8,6 +8,7 @@
     <script src="./rps.js" defer></script>
 </head>
 <body>
+    <h2>Play a game. First to 5 points wins!</h2>
     <div class="container">
         <div class="buttonContainer">
             <button id="rock">Rock</button>
@@ -18,8 +19,8 @@
             <button id="reset">PLAY AGAIN</button>
         </div>
         <div class="choices">
-            <div class ="playerChose">Player choice:                </div>
-            <div class ="computerChose">Computer choice:        </div>
+            <div class ="playerChose">Player choice: </div>
+            <div class ="computerChose">Computer choice: </div>
         </div>
         <div class="result">&nbsp</div>
         <div class="points">
@@ -40,9 +41,14 @@
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
+    h2 {
+        text-align: center;
+        margin: 25vh auto 2vh;
+    }
+
     .container {
         display: flex;
-        margin: 30vh auto;
+        margin: auto;
         flex-direction: column;
         width: 50%;
         height: 40vh;
@@ -74,5 +80,8 @@
 
     #reset {
         width: 9rem;
+        background-color: black;
+        border-color: white;
+        border-radius: 3px;
     }
 </style>
