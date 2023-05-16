@@ -1,6 +1,7 @@
 const rockBtn = document.getElementById('rock');
 const paperBtn = document.getElementById('paper');
 const scissorsBtn = document.getElementById('scissors');
+const buttons = document.querySelectorAll('button');
 let playerChose = document.querySelector('.playerChose');
 let computerChose = document.querySelector('.computerChose');
 let result = document.querySelector('.result');
@@ -56,22 +57,21 @@ function round(playerChoice) {
     }
     playerPoints.textContent = `Player points: ${playerScore}`;
     computerPoints.textContent = `Computer points : ${computerScore}`;
-}
 
-// function game() {
-//     for (let i = 0; i < 5; i++) {
-//         console.log(round())
-//     }
-//     if (score > 0) {
-//         console.log("YOU WIN!")
-//     }
-//     if (score < 0) {
-//         console.log("YOU LOSE!")
-//     }
-//     if (score == 0) {
-//         console.log("IT'S A TIE!")
-//     }
-// 
+    if (playerScore >= 5) {
+        result.textContent = "YOU WIN!";
+        buttons.forEach(e => {
+            e.disabled = true;
+        });
+    }
+
+    if (computerScore >= 5) {
+        result.textContent = "YOU LOSE!";
+        buttons.forEach(e => {
+            e.disabled = true;
+        });
+    }
+}
 
 rockBtn.addEventListener('click', () => round('Rock'));
 paperBtn.addEventListener('click', () => round('Paper'));
