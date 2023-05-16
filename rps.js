@@ -18,7 +18,7 @@ let computerChoice;
 let playerScore = 0;
 let computerScore = 0;
 
-function round(playerChoice) {
+function play(playerChoice) {
     let computerChoice = getComputerChoice();
     playerChose.textContent = `Player choice: ${playerChoice}`;
     computerChose.textContent = `Computer choice: ${computerChoice}`;
@@ -73,6 +73,6 @@ function round(playerChoice) {
     }
 }
 
-rockBtn.addEventListener('click', () => round('Rock'));
-paperBtn.addEventListener('click', () => round('Paper'));
-scissorsBtn.addEventListener('click', () => round('Scissors'));
+rockBtn.addEventListener('click', () => play('Rock'));
+paperBtn.addEventListener('click', () => play('Paper'));
+scissorsBtn.addEventListener('click', () => play('Scissors'));
