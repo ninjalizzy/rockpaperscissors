@@ -60,6 +60,7 @@ function play(playerChoice) {
     computerPoints.textContent = `Computer points : ${computerScore}`;
 
     if (playerScore >= 5) {
+        result.style.cssText = 'color: lightgreen; font-size: larger; font-weight: bold';
         result.textContent = "YOU WIN!";
         buttons.forEach(e => {
             e.toggleAttribute("disabled");
@@ -69,6 +70,7 @@ function play(playerChoice) {
     }
 
     if (computerScore >= 5) {
+        result.style.cssText = 'color: red; font-size: larger; font-weight: bold';
         result.textContent = "YOU LOSE!";
         buttons.forEach(e => {
             e.toggleAttribute("disabled");
