@@ -9,21 +9,59 @@
 </head>
 <body>
     <div class="container">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-        <div class ="playerChose"></div>
-        <div class ="computerChose"></div>
-        <div class="result"></div>
-        <div class="playerPoints"></div>
-        <div class="computerPoints"></div>
-    </div>  
+        <div class="buttonContainer">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div class="choices">
+            <div class ="playerChose">Player choice:      </div>
+            <div class ="computerChose">Computer choice:     </div>
+        </div>
+        <div class="result">&nbsp</div>
+        <div class="points">
+            <div class="playerPoints">Player points: 0</div>
+            <div class="computerPoints">Computer points: 0</div>
+        </div>
+    </div>
 </body>
 </html>
 
 <style>
-    .class {
-        align: center;
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        font-size: large;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        margin: 30vh auto;
+        flex-direction: column;
+        width: 50%;
+        height: 40vh;
         justify-content: center;
+        align-items: center;
+        border: 4px solid salmon;
+        border-radius: 10px;
+    }
+
+    .buttonContainer, .choices, .points {
+        margin: auto;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .choices, .points {
+        gap: 3rem;
+    }
+
+    button {
+        width: 7rem;
+        height: 3rem;
+        font-size: large;
     }
 </style>
