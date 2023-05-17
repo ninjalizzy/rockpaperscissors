@@ -41,6 +41,7 @@
     }
 
     body {
+        font-weight: bold;
         font-size: large;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -52,7 +53,8 @@
         height: 40vh;
         justify-content: center;
         align-items: center;
-        border: 7px solid rgba(179, 247, 252, 0.685);
+        outline: 5px solid rgba(170, 231, 252, 0.753);
+        border: 2px solid rgba(231, 174, 255, 0.884);
         border-radius: 10px;
     }
 
@@ -63,6 +65,7 @@
     }
 
     .choices, .points {
+        display: inline-flex;
         margin: auto;
     }
 
@@ -76,10 +79,28 @@
         display: none;
     }
 
+    .wonGame, .lostGame {
+        animation: pop 0.5s ease-in-out;
+        font-size: xx-large;
+        font-weight: 900; 
+        text-shadow: 2px 2px 2px rgba(169, 69, 169, 0.69);
+        color: rgb(125, 243, 95);
+    }
+
+    .lostGame {
+        color: rgb(255, 95, 95);
+    }
+    
+    @keyframes pop{
+    50%  {
+    transform: scale(1.25);
+        }
+    }
+
     #reset {
         width: 10rem;
-        font-weight: bold;
-        background-color: rgb(50, 50, 50);
+        font-weight:bolder;
+        background-color: rgba(50, 50, 50, .685);
         border-color: white;
         border-radius: 3px;
     }
