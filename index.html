@@ -8,7 +8,6 @@
     <script src="./rps.js" defer></script>
 </head>
 <body>
-    <h2>Play a game. First to 5 points wins!</h2>
     <div class="container">
         <div class="buttonContainer">
             <button id="rock">Rock</button>
@@ -34,27 +33,26 @@
 <style>
     html {
         color-scheme: dark;
+        background: url(rpsbgimg.png) no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
 
     body {
         font-size: large;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
-    h2 {
-        text-align: center;
-        margin: 25vh auto 2vh;
-    }
-
     .container {
         display: flex;
-        margin: auto;
+        margin: 30vh 80vh 29vh;
         flex-direction: column;
-        width: 50%;
+        width: 45%;
         height: 40vh;
         justify-content: center;
         align-items: center;
-        border: 4px solid salmon;
+        border: 7px solid rgba(179, 247, 252, 0.685);
         border-radius: 10px;
     }
 
@@ -65,7 +63,7 @@
     }
 
     .choices, .points {
-        gap: 3rem;
+        margin: auto;
     }
 
     button {
@@ -79,8 +77,9 @@
     }
 
     #reset {
-        width: 9rem;
-        background-color: black;
+        width: 10rem;
+        font-weight: bold;
+        background-color: rgb(50, 50, 50);
         border-color: white;
         border-radius: 3px;
     }
