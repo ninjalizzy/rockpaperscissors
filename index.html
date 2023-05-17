@@ -18,8 +18,8 @@
             <button id="reset">PLAY AGAIN</button>
         </div>
         <div class="choices">
-            <div class ="playerChose">Player choice: </div>
-            <div class ="computerChose">Computer choice: </div>
+            <div class ="playerChose">&nbsp</div>
+            <div class ="computerChose">&nbsp</div>
         </div>
         <div class="result">&nbsp</div>
         <div class="points">
@@ -65,8 +65,7 @@
     }
 
     .choices, .points {
-        display: inline-flex;
-        margin: auto;
+        gap: 4rem;
     }
 
     button {
@@ -89,6 +88,7 @@
 
     .lostGame {
         color: rgb(255, 95, 95);
+        text-shadow: 2px 2px 2px rgb(71, 3, 72);
     }
     
     @keyframes pop{
@@ -96,7 +96,6 @@
     transform: scale(1.25);
         }
     }
-
     #reset {
         width: 10rem;
         font-weight:bolder;

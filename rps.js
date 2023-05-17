@@ -57,7 +57,7 @@ function play(playerChoice) {
         }
     }
     playerPoints.textContent = `Player points: ${playerScore}`;
-    computerPoints.textContent = `Computer points : ${computerScore}`;
+    computerPoints.textContent = `Computer points: ${computerScore}`;
 
     if (playerScore >= 5) {
         result.classList.add('wonGame');
