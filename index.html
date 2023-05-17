@@ -56,6 +56,7 @@
         outline: 5px solid rgba(170, 231, 252, 0.753);
         border: 2px solid rgba(231, 174, 255, 0.884);
         border-radius: 10px;
+        background-color: rgba(2, 2, 2, 0.277);
     }
 
     .buttonContainer, .choices, .points {
@@ -72,6 +73,17 @@
         width: 7rem;
         height: 3rem;
         font-size: large;
+        font-weight: bold;
+        background-color: rgba(35, 33, 33, 0.8);
+        color: white;
+        text-shadow: 1px 1px 1px rgba(169, 169, 69, 0.69);
+        border-color: white;
+        border-radius: 3px;
+    }
+    button:disabled {
+        color:rgb(77, 72, 72);
+        border-color:rgb(158, 154, 154);
+        text-shadow: 1px 1px 1px rgb(15, 14, 14);
     }
 
     .hidden {
@@ -83,7 +95,7 @@
         font-size: xx-large;
         font-weight: 900; 
         text-shadow: 2px 2px 2px rgba(169, 69, 169, 0.69);
-        color: rgb(125, 243, 95);
+        color: rgb(118, 223, 100);
     }
 
     .lostGame {
@@ -98,9 +110,15 @@
     }
     #reset {
         width: 10rem;
-        font-weight:bolder;
+        color:rgb(213, 244, 255);
+        text-shadow: 1px 1px 1px rgba(169, 69, 169, 0.69);
+        font-weight: bolder;
         background-color: rgba(50, 50, 50, .685);
         border-color: white;
         border-radius: 3px;
+    }
+    #reset:hover {
+        transition: all 0.2s linear;
+        background-color: rgba(22, 169, 188, 0.3);
     }
 </style>
